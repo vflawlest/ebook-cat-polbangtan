@@ -129,12 +129,16 @@ section p {
    GRID & CARD
 ===================== */
 .grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
   gap: 30px;
   margin-top: 50px;
 }
 
+.card {
+  width: 240px;
+}
 .card {
   background: linear-gradient(180deg, #111827, #020617);
   padding: 28px;
@@ -286,6 +290,24 @@ footer {
 .box:hover .caption {
   opacity: 1;
 }
+.gallery img {
+  max-width: 100%;
+  width: auto;
+  display: block;
+}
+.gallery {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 30px;
+  flex-direction: row;
+  margin-top: 50px;
+}
+
+.box {
+  text-align: center;
+  width: 300px;
+}
 
 /* =====================
    RESPONSIVE
@@ -298,5 +320,8 @@ footer {
 
   .hero-text h1 {
     font-size: 34px;
+  }
+  img {
+    width: 100%;
   }
 }
